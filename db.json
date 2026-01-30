@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Mike Modo",
+      "password": "97623796"
+    },
+    {
+      "id": "2",
+      "username": "John Doe",
+      "password": "983893"
+    },
+    {
+      "id": "3",
+      "username": "Wamuthende Jorj",
+      "password": "627836"
+    },
+    {
+     "id": "4",
+      "username": "Kith Koth",
+      "password": "12344"
+    }
+  ]
+}
