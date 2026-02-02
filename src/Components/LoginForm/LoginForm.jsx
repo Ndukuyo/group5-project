@@ -2,29 +2,20 @@ import React from 'react';
 import './LoginForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const handleSubmit = (e) => {
   e.preventDefault();
-
-  // 1. Fetch all users from your json-server
   fetch("http://localhost:3000/users")
     .then((res) => res.json())
     .then((usersArray) => {
-      
-      // 2. Compare user input (formData) with the database (usersArray)
       const authenticatedUser = usersArray.find(
         (user) => 
           user.username === formData.username && 
           user.password === formData.password
       );
-
-      // 3. Handle the result
       if (authenticatedUser) {
         console.log("Login Success:", authenticatedUser);
-        // Requirement: Update App state and navigate
-        onLogin(authenticatedUser); 
-        navigate("/dashboard");
       } else {
         alert("Invalid username or password!");
       }
