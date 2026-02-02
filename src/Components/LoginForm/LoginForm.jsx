@@ -3,21 +3,18 @@ import './LoginForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
 
 import { useState, useEffect } from 'react';
-
+ const LoginForm = ({ onLogin }) => {
+  const [formData, setFormData] = useState({ username: '', password: '' });
+   const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+ 
 const handleSubmit = (e) => {
   e.preventDefault();
   fetch("http://localhost:3000/users")
     .then((res) => res.json())
     .then((usersArray) => {
 
-      const LoginForm = ({ onLogin }) => {
-  const navigate = useNavigate();
-  const [formData, setFormData] = useState({ username: '', password: '' });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-}
       const authenticatedUser = usersArray.find(
         (user) => 
           user.username === formData.username && 
@@ -29,19 +26,14 @@ const handleSubmit = (e) => {
         onLogin(authenticatedUser); 
         navigate("/dashboard");
       } else {
-        const goToRegister = window.confirm(
+        console.log(
           "Invalid username or password. Would you like to create a new account?"
         );
-
-        if (goToRegister) {
-          navigate("/register"); 
-        }
       }
     })
     .catch((err) => console.error("Database connection error:", err));
-};
 
-const LoginForm = () => {
+}
   return (
     <div className='wrapper'>
         <form action="">
