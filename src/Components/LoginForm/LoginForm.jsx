@@ -9,20 +9,37 @@ const handleSubmit = (e) => {
   fetch("http://localhost:3000/users")
     .then((res) => res.json())
     .then((usersArray) => {
+
+      const LoginForm = ({ onLogin }) => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({ username: '', password: '' });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+}
       const authenticatedUser = usersArray.find(
         (user) => 
           user.username === formData.username && 
           user.password === formData.password
       );
+
       if (authenticatedUser) {
         console.log("Login Success:", authenticatedUser);
+        onLogin(authenticatedUser); 
+        navigate("/dashboard");
       } else {
-        alert("Invalid username or password!");
+        const goToRegister = window.confirm(
+          "Invalid username or password. Would you like to create a new account?"
+        );
+
+        if (goToRegister) {
+          navigate("/register"); 
+        }
       }
     })
     .catch((err) => console.error("Database connection error:", err));
 };
-
 
 const LoginForm = () => {
   return (
