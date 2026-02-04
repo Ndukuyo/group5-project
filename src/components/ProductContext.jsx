@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-export const ProductContext = createContext(); 
+export const ProductContext = createContext();
 
 export const ProductCardProvider = ( { children } ) => {
     const [products, setProducts] = useState([ 

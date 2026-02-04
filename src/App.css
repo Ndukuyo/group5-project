@@ -1,3 +1,57 @@
+html body{
+    /* padding: 0; */
+    height: 100%;
+    margin: 0;
+}
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vw;
+}
+
+.content{
+    flex: 1;
+}
+
+.hero{
+    justify-content: center;
+}
+
+.hero h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 3vw;
+}
+
+.hero p{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.navBar{
+    border: 1px solid black;
+    display: flex;
+    background-color: rgb(9, 92, 236);
+    /* flex-direction: column; */
+
+}
+
+.navBar ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.navBar li{
+    justify-content: center;    
+    padding: 2vw;
+    font-size: 3vw;
+    font-weight: bold;
+    color: aliceblue;
+
+
+}
 .search-bar{
     width: 100vw;
     display: flex;
@@ -69,4 +123,16 @@
     font-size: 3vw;
     text-align: center;
     
+}
+
+footer {
+    background-color:  rgb(9, 92, 236);
+
+}
+
+.footer{
+    text-align: center;
+    background-color:  rgb(9, 92, 236);
+    padding: 2rem;
+    width: 100%;
 }
