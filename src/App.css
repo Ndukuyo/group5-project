@@ -1,62 +1,31 @@
-html body{
-    /* padding: 0; */
-    height: 100%;
-    margin: 0;
+.header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 0 20px;
 }
-
-.app-container{
-    display: flex;
-    flex-direction: column;
-    min-height: 100vw;
-}
-
-.content{
-    flex: 1;
-}
-
-.hero{
-    justify-content: center;
-}
-
-.hero h1{
-    font-weight: bold;
-    text-align: center;
-    font-size: 3vw;
-}
-
-.hero p{
-    text-align: center;
-    font-size: 2vw;
-}
-
-.navBar{
-    border: 1px solid black;
-    display: flex;
-    background-color: rgb(9, 92, 236);
-    /* flex-direction: column; */
-
-}
-
-.navBar ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-}
-
-.navBar li{
-    justify-content: center;    
-    padding: 2vw;
-    font-size: 3vw;
-    font-weight: bold;
-    color: aliceblue;
+/* .HomeButton {
+  background-color: rgb(3, 3, 252);
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid rgb(36, 7, 2);
+  border-radius: 5px;
+  display:inline-block;
+  text-decoration: none;
+  margin-top: 20px;
+} */
 
 
-}
-.search-bar{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 2vw;
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 .search-bar input{
@@ -135,4 +104,132 @@ footer {
     background-color:  rgb(9, 92, 236);
     padding: 2rem;
     width: 100%;
+
+}
+
+
+button {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+.navbar-container {
+  display: flex;            /* Turns on Flexbox */
+  flex-direction: row;     /* Aligns items horizontally */
+  justify-content: center;  /* Centers buttons (use 'space-around' for gaps) */
+  gap: 20px;               /* Adds specific spacing between buttons */
+  padding: 20px;
+  background-color: #333;   /* Optional: dark background for contrast */
+}
+
+.nav-btn {
+  background-color: #0000ff;
+  color: rgb(234, 229, 229);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-btn:hover {
+  background-color: #0000aa; /* Darkens button when you hover over it */
+}
+
+
+
+.button-row {
+  display: flex;            /* Enables the horizontal layout */
+  flex-direction: row;     /* Ensures they sit side-by-side */
+  justify-content: center;  /* Centers the whole row on the page */
+  gap: 15px;               /* Creates equal space between each button */
+  padding: 20px;
+}
+
+.custom-button {
+  background-color: blue;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.custom-button:hover {
+  background-color:orangered; /* Visual feedback when hovering */
+}
+
+
+/* Header.css */
+.nav-container {
+  display: flex;         /* This forces the buttons into a row */
+  flex-direction: row;   /* Horizontal alignment */
+  justify-content: center; /* Centers them on the page */
+  gap: 20px;            /* Adds space between the buttons */
+  padding: 15px;
+}
+
+/* .blue-btn {
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+} */
+
+
+
+
+.footer-container {
+  background-color: #6c14ba; /* Dark background */
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto; /* Helps push it to the bottom if using a flex-box body */
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.8rem;
+}
+
+
+
+  /* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Takes full height of the screen */
+  background-color: #f4f7f6; /* Soft light background */
+}
+
+main {
+  flex: 1; /* Pushes the footer to the bottom */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
