@@ -1,0 +1,45 @@
+/* Header.css */
+.nav-container {
+  display: flex;                /* Aligns buttons in a row */
+  justify-content: space-between; /* Pushes buttons to spread across the bar */
+  align-items: center;          /* Vertically centers everything */
+  padding: 15px 50px;           /* Top/Bottom and Left/Right padding */
+  background-color: #116cc7;    /* Dark professional background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adds a subtle shadow under the bar */
+  
+}
+
+.blue-btn {
+  background-color: #3498da;    /* A cleaner blue */
+  color: rgb(247, 246, 246);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.4s; /* Smooth color change on hover */
+}
+
+.blue-btn:hover {
+  background-color: #f8a707;    /* Darkens slightly when mouse is over it */
+}
+
+.button-row {
+  display: flex;            /* Enables the horizontal layout */
+  flex-direction: row;     /* Ensures they sit side-by-side */
+  justify-content: center;  /* Centers the whole row on the page */
+  gap: 15px;               /* Creates equal space between each button */
+  padding: 20px;
+  border: 2px solid #04111a;
+    border-radius: 8px;
+    background-color: #cccbd0;
+}
+
+.Heading {
+  text-align: center;
+  color: #080000;
+  margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    font-style: inherit;
+}
