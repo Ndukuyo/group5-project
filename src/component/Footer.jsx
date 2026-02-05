@@ -1,6 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import { FaFacebook, FaInstagram, FaTwitter, FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Login from "../Pages/Login";
+import { NavLink } from "react-router-dom";
 
 
 function Footer() {
@@ -20,6 +22,7 @@ function Footer() {
             <li><a href="/">Home</a></li>
             <li><a href="/products">Products</a></li>
             <li><a href="/contact">Contact Us</a></li>
+            <li> <NavLink to="/login" > Login  </NavLink> </li>
           </ul>
         </div>
 

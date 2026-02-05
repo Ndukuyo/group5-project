@@ -6,13 +6,14 @@ import SearchBar from './components/SearchBar'
 import ProductList from './components/ProductList'
 import  { ProductCardProvider } from './components/ProductContext'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './component/Header'
+import Footer from './component/Footer'
 import { FaShoppingCart } from 'react-icons/fa'
 
 import Home from './Pages/Home'
 import Products from './Pages/Products'
 import ContactUS from './Pages/ContactUS'
+
 
 function App() {
 
